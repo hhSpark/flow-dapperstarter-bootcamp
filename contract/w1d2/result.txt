@@ -1,0 +1,52 @@
+0:13:12 
+New Script 
+"account 0x1"
+10:13:12 
+New Script 
+"empty collection for this account"
+10:13:12 
+New Script 
+"account 0x2"
+10:13:12 
+New Script 
+"+-----+"
+10:13:12 
+New Script 
+"|*   *|"
+10:13:12 
+New Script 
+"| * * |"
+10:13:12 
+New Script 
+"|  *  |"
+10:13:12 
+New Script 
+"| * * |"
+10:13:12 
+New Script 
+"|*   *|"
+10:13:12 
+New Script 
+"+-----+"
+10:13:12 
+New Script 
+"account 0x3"
+10:13:12 
+New Script 
+"empty collection for this account"
+10:13:12 
+New Script 
+"account 0x4"
+10:13:12 
+New Script 
+"empty collection for this account"
+10:13:12 
+New Script 
+"account 0x5"
+10:13:12 
+New Script 
+"empty collection for this account"
+10:13:12 
+New Script 
+Result
+{"type":"Void"}
