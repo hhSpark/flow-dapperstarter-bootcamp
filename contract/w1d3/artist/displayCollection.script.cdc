@@ -40,7 +40,6 @@ pub fun getPictureString(canvas: Artist.Canvas): String {
     var line: String = ""
     
     var total_string: String= ""    
-
     
     while height_index <= height+1 {                
         switch height_index {
