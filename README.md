@@ -14,8 +14,50 @@ Flow Faucet
 https://testnet-faucet.onflow.org/
 
 Flow TestNet
-https://flow-view-source.com/testnet/account/0xdced77a314381a15
+Artist contract https://flow-view-source.com/testnet/account/0xdced77a314381a15
+my blocon auth account 1 https://flow-view-source.com/testnet/account/0x25f499d450436e82
+my blocon auth account 2  https://flow-view-source.com/testnet/account/0x02fbb08b3e92f9d3
+fungible token https://flow-view-source.com/testnet/account/0x9a0766d93b6608b7/contract/FungibleToken
+flow token https://flow-view-source.com/testnet/account/0x7e60df042a9c0868/contract/FlowToken
 
+Avaiable contract z0x02fbb08b3e92f9d3 (not use yet)
+
+#commandlines
+
+--deploy contract to testnet
+flow keys generate --sig-algo "ECDSA_secp256k1"
+flow init
+flow project deploy --network=testnet
+flow project deploy --network=testnet --update
+
+--command line interaction 
+flow transactions send ./LocalArtist/transactions/print.cdc \
+  --network=testnet \
+  --signer testnet-local-artist \
+  --args-json='[{"type": "Int", "value": "5"}, {"type": "Int", "value": "5"}, {"type": "String", "value": "0111010001000100010011111"}]'
+  
+flow scripts execute ./LocalArtist/scripts/getCanvases.cdc \
+  --network=testnet \
+  --args-json='[{"type": "Address", "value": "0x01"}]'
+
+
+--run react client side
+cd Artist
+npm i
+echo "PUBLIC_URL=/public/" > .env
+npm run start
+
+
+
+
+
+--use emulator
+flow keys generate  --sig-algo=ECDSA_secp256k1
+flow accounts create --key <Fill Public Key> --sig-algo "ECDSA_secp256k1" --signer "emulator-account"
+flow project deploy --update
+flow transactions send ./artist/createCollection.transaction.cdc --signer "emulator-artist"
+flow transactions send ./artist/print.transaction.cdc --args-json='[{"type": "UInt8", "value": "5"}, {"type": "UInt8", "value": "5"},{"type": "String", "value":"*   * * *   *   * * *   *"}]' --signer "emulator-artist"
+flow scripts execute ./artist/displayCollection.script.cdc --arg Address:"0x01cf0e2f2f715450"
 
 
 # Mistakes To Avoid
@@ -63,4 +105,6 @@ https://flow-view-source.com/testnet/account/0xdced77a314381a15
 5. It is about resource ownership management. (Responsible for authentication issuing & delivery)
 6. It is about resource access control management. (Responsible for providing rights for M parties)
 7. resource is a programmable asset. (asset + program functions + input/output)
+8. resource defines all possible capabilities. intereface allows to scope it. 
+9. reference specify a link handle for external to use it (a link to abstract a capability access control)
 
