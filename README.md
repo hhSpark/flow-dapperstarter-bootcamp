@@ -47,10 +47,6 @@ npm i
 echo "PUBLIC_URL=/public/" > .env
 npm run start
 
-
-
-
-
 --use emulator
 flow keys generate  --sig-algo=ECDSA_secp256k1
 flow accounts create --key <Fill Public Key> --sig-algo "ECDSA_secp256k1" --signer "emulator-account"
@@ -95,6 +91,8 @@ flow scripts execute ./artist/displayCollection.script.cdc --arg Address:"0x01cf
             /public/ArtistPictureCollection,
             target: /storage/ArtistPictureCollection
         )
+8.Access Control 
+
 
 # Architecture Thinking
 -----------------------------------------------------------------------------
