@@ -22,6 +22,8 @@ flow token https://flow-view-source.com/testnet/account/0x7e60df042a9c0868/contr
 
 Avaiable contract z0x02fbb08b3e92f9d3 (not use yet)
 
+Solidity v.s. Flow https://twitter.com/techbubble/status/1406705298987884544?s=21
+
 #commandlines
 
 --deploy contract to testnet
@@ -55,6 +57,11 @@ flow transactions send ./artist/createCollection.transaction.cdc --signer "emula
 flow transactions send ./artist/print.transaction.cdc --args-json='[{"type": "UInt8", "value": "5"}, {"type": "UInt8", "value": "5"},{"type": "String", "value":"*   * * *   *   * * *   *"}]' --signer "emulator-artist"
 flow scripts execute ./artist/displayCollection.script.cdc --arg Address:"0x01cf0e2f2f715450"
 
+--use dappstarter
+1. go to website to create a project
+2. run "yarn install" to install depedencies
+3. run "yarn start" to start 
+
 
 # Mistakes To Avoid
 -----------------------------------------------------------------------------
@@ -71,6 +78,7 @@ flow scripts execute ./artist/displayCollection.script.cdc --arg Address:"0x01cf
 - struct doesn't need "new", but resource will need "new".
 - storage (actual data) is associated with each account. 
 - In flow.json, 3 things (contract, account-keys, deployment setup)
+- flow has no inhere
 
 
 # Coding To Remember
@@ -105,4 +113,9 @@ flow scripts execute ./artist/displayCollection.script.cdc --arg Address:"0x01cf
 7. resource is a programmable asset. (asset + program functions + input/output)
 8. resource defines all possible capabilities. intereface allows to scope it. 
 9. reference specify a link handle for external to use it (a link to abstract a capability access control)
+10. Cadence does not have inheritance as an architectural best practice.
+11. uses "capability based security." This means that only the owner of an object or someone granted a reference to an object has access — less code, more control 
+12. Cadence contracts reside in an account's storage area and belong to the account owner. 
+13. The owner decides who can access and interact with the contract, making it more secure Lock
+14. Resource is like a cake. Transaction is like a "ticket" request... I want some cake... please send this cake to another person. 
 
