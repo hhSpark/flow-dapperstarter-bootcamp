@@ -1,5 +1,4 @@
-# flow-dapperstarter-bootcamp
-Flow &amp; Cadence
+# flow-dapperstarter-bootcamp: learn flow & cadence
 
 Bootcamp Materials
 https://github.com/decentology/fast-floward-1
@@ -24,8 +23,7 @@ Avaiable contract z0x02fbb08b3e92f9d3 (not use yet)
 
 Solidity v.s. Flow https://twitter.com/techbubble/status/1406705298987884544?s=21
 
-#commandlines
-
+# commandlines
 --deploy contract to testnet
 flow keys generate --sig-algo "ECDSA_secp256k1"
 flow init
@@ -41,7 +39,6 @@ flow transactions send ./LocalArtist/transactions/print.cdc \
 flow scripts execute ./LocalArtist/scripts/getCanvases.cdc \
   --network=testnet \
   --args-json='[{"type": "Address", "value": "0x01"}]'
-
 
 --run react client side
 cd Artist
@@ -64,7 +61,6 @@ flow scripts execute ./artist/displayCollection.script.cdc --arg Address:"0x01cf
 
 
 # Mistakes To Avoid
------------------------------------------------------------------------------
 - strong data type checking at compiling time, need explict type casting.
 - use "pub" not "public"
 - use "label: type" to specify function params
@@ -82,7 +78,6 @@ flow scripts execute ./artist/displayCollection.script.cdc --arg Address:"0x01cf
 
 
 # Coding To Remember
------------------------------------------------------------------------------
 1. account: AuthAccount | account.address.toString() | getAccount(address)
 2. return nil
 3. dictionary let prints: {string }
@@ -103,7 +98,6 @@ flow scripts execute ./artist/displayCollection.script.cdc --arg Address:"0x01cf
 
 
 # Architecture Thinking
------------------------------------------------------------------------------
 1. Think about object A with pure data (no functions yet)
 2. Think about object B = A + functions (may have its storage for inputs & outputs for functions)
 3. Think about object B is "saved" into blockchain crypto account C. 
