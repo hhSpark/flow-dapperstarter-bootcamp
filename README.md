@@ -9,19 +9,23 @@ https://www.youtube.com/channel/UCzoEZCV_DPbwVDBK6G6CmuQ
 Flow Doc
 https://docs.onflow.org/cadence/tutorial/07-resources-compose/#gatsby-focus-wrapper
 
+
 Flow Faucet
 https://testnet-faucet.onflow.org/
+
+Solidity v.s. Flow 
+https://twitter.com/techbubble/status/1406705298987884544?s=21
 
 Flow TestNet
 Artist contract https://flow-view-source.com/testnet/account/0xdced77a314381a15
 my blocon auth account 1 https://flow-view-source.com/testnet/account/0x25f499d450436e82
 my blocon auth account 2  https://flow-view-source.com/testnet/account/0x02fbb08b3e92f9d3
-fungible token https://flow-view-source.com/testnet/account/0x9a0766d93b6608b7/contract/FungibleToken
+fungible token (TestNet)https://flow-view-source.com/testnet/account/0x9a0766d93b6608b7/contract/FungibleToken
 flow token https://flow-view-source.com/testnet/account/0x7e60df042a9c0868/contract/FlowToken
 
-Avaiable contract z0x02fbb08b3e92f9d3 (not use yet)
+Flow MainNet
+non-fungible token contract	0x1d7e57aa55817448
 
-Solidity v.s. Flow https://twitter.com/techbubble/status/1406705298987884544?s=21
 
 # commandlines
 --deploy contract to testnet
@@ -112,4 +116,5 @@ flow scripts execute ./artist/displayCollection.script.cdc --arg Address:"0x01cf
 12. Cadence contracts reside in an account's storage area and belong to the account owner. 
 13. The owner decides who can access and interact with the contract, making it more secure Lock
 14. Resource is like a cake. Transaction is like a "ticket" request... I want some cake... please send this cake to another person. 
+15. resource can have storage path; resource can have public reference path (capability)
 
