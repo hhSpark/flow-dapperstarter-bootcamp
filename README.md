@@ -62,6 +62,7 @@ flow scripts execute ./artist/displayCollection.script.cdc --arg Address:"0x01cf
 1. go to website to create a project
 2. run "yarn install" to install depedencies
 3. run "yarn start" to start 
+4. 
 
 
 # Mistakes To Avoid
